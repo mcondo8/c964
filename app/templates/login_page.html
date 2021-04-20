@@ -1,0 +1,51 @@
+<!-- Render a login page template, handle administrative and user login -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CorpCorp C964 Prescription Tool Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h2>CorpoCorp Prescription Management</h2>
+
+        <form action="{{ frmact }}" method="POST">
+            <div class = "row">
+                <div class="col-md-4">
+                    <label for="user">User Name</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="user" name="user" />
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-md-4">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="password" id="password" name="password" />
+                </div>
+            </div>
+            <div class = "row">
+                <input type="submit" value="Log In" id="login" name="login"></input>
+            </div>
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+</html>
