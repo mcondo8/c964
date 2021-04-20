@@ -4,6 +4,8 @@ FROM python:3.9.4-slim-buster
 
 MAINTAINER Michael Condon <mcondo8@wgu.edu>
 
+EXPOSE 5000
+
 RUN apt-get update
 #nginx to handle web req, supervisor to control uwsgi & nginx
 #build-essential/gcc is required for uwsgi
@@ -21,7 +23,10 @@ RUN echo $PATH
 #Project requirements
 
 COPY requirements.txt .
+COPY hello_world.py .
 RUN pip install -r requirements.txt
-
+ENTRYPOINT "python3"
+cmd ["echo", "hostname -I"]
+cmd ["python", "hello_world.py"]
 
 
