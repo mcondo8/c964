@@ -4,3 +4,15 @@ C964 is intended to provide an API endpoint to extract meaningful text from phot
 
 ## Installation
 C964 should be installed from the provided dockerfile. <TODO>
+
+## Dependencies
+
+## Usage
+
+## TODO 
+  * Clean up dependencies and packaging
+  * Re-factor text parsing
+  * Automate label corner detection / tagging
+  * User Preference Page
+  * User Creation Page
+  * Password Reset
