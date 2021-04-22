@@ -4,6 +4,8 @@ C964 is intended to provide an API endpoint to extract meaningful text from phot
 
 ## Installation
 C964 should be installed from the provided dockerfile. <TODO>
+Flask, included, will launch in self-hosted debug mode, binding to 0.0.0.0:5000
+ Docker EG: docker run -d -p 5000:5000 --name c964_host c964:1.0
 
 ## Dependencies
 
@@ -16,3 +18,5 @@ C964 should be installed from the provided dockerfile. <TODO>
   * User Preference Page
   * User Creation Page
   * Password Reset
+  * Pass appropriate configuration to uWGSI and NGINX, in place of defualt host
+  * Launcher script to select debug or production modes
